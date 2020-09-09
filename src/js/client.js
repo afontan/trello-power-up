@@ -14,7 +14,7 @@ TrelloPowerUp.initialize({
                     // It's best to use static badges unless you need your
                     // badges to refresh.
                     // You can mix and match between static and dynamic
-                    text: 'Static',
+                    text: 'Lu, si estas leyendo esto me debes un beso',
                     icon: BLACK_ROCKET_ICON, // for card front badges only
                     color: null
                 }];
