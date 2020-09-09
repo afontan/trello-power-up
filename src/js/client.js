@@ -9,8 +9,8 @@ TrelloPowerUp.initialize({
         return t.card('all')
             .then(function(card){
                 console.log(card);
-                console.log(card.idList);
-                t.list(card.idList).then(function (list) {
+                console.log(card.idList.toString());
+                t.list(card.idList.toString()).then(function (list) {
                     console.log(list);
                 });
                 return [{
