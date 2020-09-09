@@ -1,0 +1,14 @@
+{
+  "name": "trello-power-up",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/afontan/trello-power-up.git",
+  "author": "afontan <alejandro.fontan@mercadolibre.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "parcel build src/html/*.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
