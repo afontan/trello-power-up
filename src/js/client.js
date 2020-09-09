@@ -24,13 +24,6 @@ TrelloPowerUp.initialize({
                             refresh: 10 // in seconds
                         };
                     }
-                }, {
-                    // It's best to use static badges unless you need your
-                    // badges to refresh.
-                    // You can mix and match between static and dynamic
-                    text: 'Static',
-                    icon: HYPERDEV_ICON, // for card front badges only
-                    color: null
                 }];
             });
     }
