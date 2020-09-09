@@ -9,9 +9,9 @@ TrelloPowerUp.initialize({
         return t.card('all')
             .then(function(card){
                 console.log(JSON.stringify(card, null, 2));
-                t.lists(card.idList.toString())
-                    .then(function (lists) {
-                        console.log(JSON.stringify(lists, null, 2));
+                t.list(card.idList)
+                    .then(function (list) {
+                        console.log(JSON.stringify(list, null, 2));
                     });
                 return [{
                     // It's best to use static badges unless you need your
