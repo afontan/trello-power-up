@@ -6,13 +6,13 @@ var BLACK_ROCKET_ICON = 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9
 
 TrelloPowerUp.initialize({
     'card-badges': function (t, opts) {
+        t.lists('all')
+            .then(function (lists) {
+                console.log(JSON.stringify(lists, null, 2));
+            });
         return t.card('all')
             .then(function(card){
                 console.log(JSON.stringify(card, null, 2));
-                t.list('all')
-                    .then(function (list) {
-                        console.log(JSON.stringify(list, null, 2));
-                    });
                 return [{
                     // It's best to use static badges unless you need your
                     // badges to refresh.
