@@ -1,24 +1,16 @@
-// server.js
-// where your node app starts
+var express = require('express');
 
-const compression = require('compression');
-const cors = require('cors');
-const express = require('express');
-
-const app = express();
-
-// compress our client side content before sending it over the wire
-app.use(compression());
-
-// your manifest must have appropriate CORS headers, you could also use '*'
-app.use(cors({ origin: 'https://trello.com' }));
+var app = express();
 
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-// listen for requests :)
-const listener = app.listen(process.env.PORT, function () {
-  console.info(`Node Version: ${process.version}`);
-  console.log('Trello Power-Up Server listening on port ' + listener.address().port);
+// http://expressjs.com/en/starter/basic-routing.html
+app.get("*", function (request, response) {
+  response.sendFile(__dirname + '/views/index.html');
 });
 
+// listen for requests :)
+var listener = app.listen(process.env.PORT, function () {
+  console.log('Your app is listening on port ' + listener.address().port);
+});
